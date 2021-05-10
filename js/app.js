@@ -13,8 +13,14 @@ button.addEventListener("click", function(){
     masterwords.push(temporaryRandomWord[0])
     }
     for (word of masterwords){
+        if (word == undefined){
+            box1.innerHTML+=`<p>you've run out of words</p>`
+            break
+        }
         box1.innerHTML+=`<p>${word}</p>`
+
     }
+    
     return usersInput;
     
 
@@ -31,7 +37,12 @@ reshuffle.addEventListener("click", function(){
     masterwords.push(temporaryRandomWord[0])
     }
     for (word of masterwords){
+        if (word == undefined){
+            box1.innerHTML+=`<p>you've run out of words</p>`
+            break
+        }
         box1.innerHTML+=`<p>${word}</p>`
+
     }
     return usersInput;
 
